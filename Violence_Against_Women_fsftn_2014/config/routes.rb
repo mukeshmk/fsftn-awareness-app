@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 get "home" => "home#home"
 
+get "about" => "about#about"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
