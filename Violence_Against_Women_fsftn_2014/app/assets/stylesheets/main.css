@@ -121,6 +121,10 @@ body {
     text-align: center;
     width: 450px;
 }
+#joinContentWrapper div {
+    margin: 20px 0;
+}
+
 #joinContentWrapper form {
     background-color: rgba(255, 255, 255, 0.65);
     border-radius: 15px;
@@ -128,8 +132,8 @@ body {
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 100;
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: 35px;
+    margin-top: 35px;
     padding: 25px 20px;
 }
 #joinContentWrapper input {
@@ -139,13 +143,12 @@ body {
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 100;
-    margin: 14px 0;
+    margin: 4px 0;
     padding: 5px 10px;
 }
 .actions {
     margin-top: 30px;
 }
-
 .actions input {
     background-color: #FFFFFF;
     border: medium none;
@@ -155,6 +158,7 @@ body {
     font-size: 18px;
     font-weight: 100;
     height: 30px;
+    margin-top: 30px;
     padding: 5px 10px;
     width: 263px;
 }
@@ -178,4 +182,53 @@ body {
 }
 .notice_name {
     font-weight: 400;
+}
+.blogWrapper {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 30px;
+    margin: auto;
+    text-align: justify;
+    width: 960px;
+}
+.blogTitle {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.blogContent {
+    text-indent: 40px;
+}
+.blogAuthor {
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+.blogOptions li {
+    float: left;
+    list-style: none outside none;
+}
+.blogOptions li a {
+    border-bottom: 1px solid #FFFFFF;
+    color: #808080;
+    font-size: 14px;
+    padding: 0 25px;
+    text-decoration: none;
+}
+.blogOptions li a:hover {
+    color: #000000;
+}
+.newBlog {
+    clear: both;
+    margin: 100px auto auto;
+    width: 960px;
+}
+.newBlog > a {
+    color: #333333;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-decoration: none;
 }

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :blogs
+
   resources :joins
 
 get "home" => "home#home"

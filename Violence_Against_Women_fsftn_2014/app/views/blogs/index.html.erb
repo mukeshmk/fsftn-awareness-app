@@ -1,0 +1,34 @@
+<div class="headerWrapper">
+  <h1 id="title">Stop voilence agaist Women</h1>
+  <ul class="nav">
+    <li><%= link_to 'Home', 'home' %></li>
+    <li><%= link_to 'About', 'about' %></li>
+    <li><%= link_to 'Blog', 'blogs' %></li>
+    <li><%= link_to 'Join us', 'joins/new' %></li>
+  </ul>
+</div>
+<div class="blogWrapper">
+
+      <% @blogs.each do |blog| %>
+          <div class="blogTitle">
+            <%= blog.title %>
+          </div>
+          <div class="blogContent">
+            <%= blog.post %>
+          </div>
+          <div class="blogAuthor">
+            <%= blog.author %>
+          </div>
+        <div class="blogOptions">
+          <ul>
+            <li><%= link_to 'Show', blog %></li>
+            <li><%= link_to 'Edit', edit_blog_path(blog) %></li>
+            <li><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </div>
+        <% end %>
+
+</div>
+<div class="newBlog">
+  <%= link_to 'New Blog', new_blog_path %>
+</div>
