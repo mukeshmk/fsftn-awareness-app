@@ -1,9 +1,9 @@
-body{
-    margin: 0;
+
+body {
     display: table;
+    margin: 0;
     width: 100%;
 }
-
 #title {
     background-color: #333333;
     color: #FFFFFF;
@@ -84,12 +84,98 @@ body{
 .siceNav {
     padding: 0;
 }
+.siceNav li {
+    float: none;
+    width: 300px;
+}
 .siceNav li a {
-    margin: 0;
+    border-left: 2px solid #FFFFFF;
+    display: table;
+    margin: 2px 0;
+    padding: 0;
+    width: 300px;
 }
 .siceNav li a:hover {
-    border: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #333333;
+    border-image: none;
+    border-style: none none none solid;
+    border-width: medium medium medium 2px;
 }
 .sideTitle h3 {
     text-align: center;
+}
+#joinContentWrapper {
+    background-image: url("/assets/join_image_2.jpg");
+    background-repeat: no-repeat;
+    display: table;
+    height: 500px;
+    margin: auto;
+    width: 960px;
+}
+.joinImageTag {
+    float: left;
+    text-align: center;
+    width: 450px;
+}
+#joinContentWrapper form {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 15px;
+    float: left;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 25px 20px;
+}
+#joinContentWrapper input {
+    display: table;
+}
+.field input {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 14px 0;
+    padding: 5px 10px;
+}
+.actions {
+    margin-top: 30px;
+}
+
+.actions input {
+    background-color: #FFFFFF;
+    border: medium none;
+    border-radius: 3px;
+    box-shadow: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    height: 30px;
+    padding: 5px 10px;
+    width: 263px;
+}
+#notice {
+    color: #FFFFFF;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+#notice_inner {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #333333;
+    display: table-cell;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    width: 960px;
+}
+.notice_name {
+    font-weight: 400;
 }

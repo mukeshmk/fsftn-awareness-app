@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :joins
+
 get "home" => "home#home"
 
 get "about" => "about#about"
+
 
 
 
