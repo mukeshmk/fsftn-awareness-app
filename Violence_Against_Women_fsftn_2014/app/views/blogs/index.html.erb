@@ -1,17 +1,18 @@
 <div class="headerWrapper">
-  <h1 id="title">Stop voilence agaist Women</h1>
+  <h1 id="title">Stop voilence against Women</h1>
   <ul class="nav">
     <li><%= link_to 'Home', 'home' %></li>
     <li><%= link_to 'About', 'about' %></li>
     <li><%= link_to 'Blog', 'blogs' %></li>
-    <li><%= link_to 'Join us', 'joins/new' %></li>
+    <li><%= link_to 'Join us', 'joins' %></li>
   </ul>
 </div>
 <div class="blogWrapper">
 
       <% @blogs.each do |blog| %>
+        <div class="blog">
           <div class="blogTitle">
-            <%= blog.title %>
+            <%= link_to blog.title, blog %>
           </div>
           <div class="blogContent">
             <%= blog.post %>
@@ -21,13 +22,21 @@
           </div>
         <div class="blogOptions">
           <ul>
-            <li><%= link_to 'Show', blog %></li>
             <li><%= link_to 'Edit', edit_blog_path(blog) %></li>
             <li><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
           </ul>
         </div>
+        </div>
         <% end %>
 
+    <div class="sideTitle">
+      <h3>Titles</h3>
+      <ul class="nav siceNav">
+        <% @blogs.each do |blog| %>
+          <li><%= link_to blog.title, blog %></li>
+        <% end %>
+      </ul>
+    </div>
 </div>
 <div class="newBlog">
   <%= link_to 'New Blog', new_blog_path %>
