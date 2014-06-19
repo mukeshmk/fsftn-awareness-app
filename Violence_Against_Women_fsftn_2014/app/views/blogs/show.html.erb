@@ -1,19 +1,41 @@
-<p id="blog_notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Post:</strong>
+<div class="headerWrapper">
+  <h1 id="title">Stop voilence against Women</h1>
+  <ul class="nav">
+    <li><%= link_to 'Home', 'home' %></li>
+    <li><%= link_to 'About', 'about' %></li>
+    <li><%= link_to 'Blog', 'blogs' %></li>
+    <li><%= link_to 'Join us', 'joins' %></li>
+  </ul>
+</div>
+<div class="blogWrapper">
+        <div class="blog">
+          <div class="blogTitle">
+			  <%= @blog.title %>
+          </div>
+          <div class="blogContent" style = "height: auto;">
   <%= @blog.post %>
-</p>
-
-<p>
-  <strong>Author:</strong>
+          </div>
+          <div class="blogAuthor">
   <%= @blog.author %>
-</p>
+          </div>
+        <div class="blogOptions">
+          <ul>
+            <li>
+				<%= link_to 'Edit', edit_blog_path(@blog) %>
+			</li>
+			<li>
+				<%= link_to 'Back', blogs_path %>
+			</li>
+          </ul>
+        </div>
+        </div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+    <div class="sideTitle">
+      <h3>Titles</h3>
+      <ul class="nav siceNav">
+        <% @blogs_all.each do |blog| %>
+          <li><%= link_to blog.title, blog %></li>
+        <% end %>
+      </ul>
+    </div>
+</div>

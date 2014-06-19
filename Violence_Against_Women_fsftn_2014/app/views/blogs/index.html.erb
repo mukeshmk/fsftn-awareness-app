@@ -12,7 +12,7 @@
       <% @blogs.each do |blog| %>
         <div class="blog">
           <div class="blogTitle">
-            <%= link_to blog.title, blog %>
+            <a id="<%= blog.title%>"><%= link_to blog.title, blog %></a>
           </div>
           <div class="blogContent">
             <%= blog.post %>
@@ -33,7 +33,9 @@
       <h3>Titles</h3>
       <ul class="nav siceNav">
         <% @blogs.each do |blog| %>
-          <li><%= link_to blog.title, blog %></li>
+          <li>
+            <a href="#<%= blog.title %>"><%= blog.title %></a>
+          </li>
         <% end %>
       </ul>
     </div>
